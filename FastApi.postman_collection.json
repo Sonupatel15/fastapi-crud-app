@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "3dccb922-0fea-4748-90e3-ec42108b747a",
+		"name": "FastApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41470867"
+	},
+	"item": [
+		{
+			"name": "Creating the user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n  \"name\": \"Sonupatel\",\n  \"phone_no\": \"8861220135\",\n  \"address\": \"Bengaluru\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/users/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/search/?name=Sonupatel",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Sonupatel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upadting User details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"address\": \"PES University, Dwaraka Nagar, Banashankari 3rd stage, Bengaluru\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/users/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Deleting User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/users/3"
+			},
+			"response": []
+		}
+	]
+}
