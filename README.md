@@ -25,12 +25,6 @@ uvicorn app.main:app --reload
 
 The API will be available at `http://127.0.0.1:8000`.
 
-## API Documentation
-
-Once the application is running, visit:
-
-- Interactive API docs: `http://127.0.0.1:8000/docs`
-- Alternative docs: `http://127.0.0.1:8000/redoc`
 
 ## API Endpoints
 
